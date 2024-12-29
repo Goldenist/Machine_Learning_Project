@@ -1,5 +1,3 @@
-# Rechorus
-Rechorus复现JMP-GCF
 ## 配置环境说明
 
 1. 我们小组的电脑配置的环境与 Rechorus 官方要求的环境有些许不一样，主要体现在 torch版本，官方版本为 1.12.1，我们小组使用此版本后发现会出现与电脑的 cuda 版本的兼容问题，故使用的 torch 版本为 2.2.1，其余环境与官方 requirements.txt一致。
@@ -18,7 +16,7 @@ Rechorus复现JMP-GCF
 ### 2. helps 目录
 
 - JMP\_GCF\_kRunner.py : 这个代码由 BaseRunner.py 修改得到，主要修改部分为 fit() 函数。通过调用 JMP\_GCF\_012 模型的 forward() 函数，得到三种粒度对应的嵌入矩阵，存储在 out\_fit 列表中，对这三个嵌入矩阵进行遍历和反向传播。
-- JMP\_GCFRunner.py : 这个代码在 JMP\_GCF\_KRunner 的基础上加入了多阶段堆叠训练。fit() 函数按照 epoch 划分为三个训练阶段，分别优化$L_1$，$L_2$，$L_3$。通过调用 JMP\_GCF 模型的 forward() 函数，得到三种粒度的嵌入矩阵列表 out\_fit，根据当前阶段选择不同的嵌入矩阵进行训练和反向传播。
+- JMP\_GCFRunner.py : 这个代码在 JMP\_GCF\_KRunner 的基础上加入了多阶段堆叠训练。fit() 函数按照 epoch 划分为三个训练阶段，分别优化 $L_1$，$L_2$，$L_3$。通过调用 JMP\_GCF 模型的 forward() 函数，得到三种粒度的嵌入矩阵列表 out\_fit，根据当前阶段选择不同的嵌入矩阵进行训练和反向传播。
 
 ## 运行模型
 
