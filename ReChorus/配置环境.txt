@@ -1,7 +1,0 @@
-原环境有误，使用下面这段来配置环境。 pip install --upgrade --force-reinstall torch cudatoolkit numpy ipython jupyter tqdm pandas scikit-learn scipy
-修改代码：
-main.py：58行 corpus_path = os.path.join(r"D:\桌面\资料\机器学习\大作业\rechorus\ReChorus", args.path, args.dataset, model_name.reader+args.data_appendix+ '.pkl')
-	100行 result_path = os.path.join(r"D:\桌面\资料\机器学习\大作业\rechorus\ReChorus", runner.log_path,runner.save_appendix, 'rec-{}-{}.csv'.format(model_name,dataset.phase))
-BaseReader.py：47、48行：path = os.path.join(r"D:\桌面\资料\机器学习\大作业\rechorus\ReChorus", self.prefix, self.dataset, key + '.csv')
-BaseModel.py：146 行改为：if stack_val.dtype == object:  # inconsistent length (e.g., history)
-utils.py：65 行改为：if isinstance(m, (float, np.float32, np.float64)):
