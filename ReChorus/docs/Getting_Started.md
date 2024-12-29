@@ -12,15 +12,32 @@ git clone https://github.com/THUwangcy/ReChorus.git
 ```bash
 cd ReChorus
 pip install -r requirements.txt
-cd src
 ```
 
 4. Run model with the build-in dataset
 
 ```bash
-python main.py --model_name BPRMF --emb_size 64 --lr 1e-3 --l2 1e-06 --dataset Grocery_and_Gourmet_Food
-python main.py --model_name LightGCN --emb_size 64 --lr 1e-3 --l2 1e-06 --dataset Grocery_and_Gourmet_Food
+python .\src\main.py --model_name BPRMF --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset Grocery_and_Gourmet_Food --gpu "0" --num_workers 0
+python .\src\main.py --model_name BPRMF --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset MIND_Large\MINDTOPK --gpu "0" --num_workers 0
+python .\src\main.py --model_name BPRMF --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset MovieLens_1M\ML_1MTOPK --gpu "0" --num_workers 0
+
+python .\src\main.py --model_name LightGCN --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset Grocery_and_Gourmet_Food --gpu "0" --num_workers 0
+python .\src\main.py --model_name LightGCN --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset MIND_Large\MINDTOPK --gpu "0" --num_workers 0
+python .\src\main.py --model_name LightGCN --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset MovieLens_1M\ML_1MTOPK --gpu "0" --num_workers 0
+
+python .\src\main.py --model_name JMP_GCF_k_1 --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset Grocery_and_Gourmet_Food --gpu "0" --num_workers 0
+python .\src\main.py --model_name JMP_GCF_k_1 --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset MIND_Large\MINDTOPK --gpu "0" --num_workers 0
+python .\src\main.py --model_name JMP_GCF_k_1 --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset MovieLens_1M\ML_1MTOPK --gpu "0" --num_workers 0
+
+python .\src\main.py --model_name JMP_GCF_k_2 --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset Grocery_and_Gourmet_Food --gpu "0" --num_workers 0
+python .\src\main.py --model_name JMP_GCF_k_2 --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset MIND_Large\MINDTOPK --gpu "0" --num_workers 0
+python .\src\main.py --model_name JMP_GCF_k_2 --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset MovieLens_1M\ML_1MTOPK --gpu "0" --num_workers 0
+
+
 python .\src\main.py --model_name JMP_GCF_k_012 --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset Grocery_and_Gourmet_Food --gpu "0" --num_workers 0
+python .\src\main.py --model_name JMP_GCF_k_012 --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset MIND_Large\MINDTOPK --gpu "0" --num_workers 0
+python .\src\main.py --model_name JMP_GCF_k_012 --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset MovieLens_1M\ML_1MTOPK --gpu "0" --num_workers 0
+
 python .\src\main.py --model_name JMP_GCF --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset Grocery_and_Gourmet_Food --gpu "0" --num_workers 0
 python .\src\main.py --model_name JMP_GCF --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset MIND_Large\MINDTOPK --gpu "0" --num_workers 0
 python .\src\main.py --model_name JMP_GCF --emb_size 64 --lr 1e-3 --l2 1e-06  --dataset MovieLens_1M\ML_1MTOPK --gpu "0" --num_workers 0
